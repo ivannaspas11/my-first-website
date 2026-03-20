@@ -1,33 +1,154 @@
-<style>
-    .chessboard { border-collapse: collapse; }
-    .chessboard td { width: 50px; height: 50px; }
-    /* Шаховий порядок кольорів */
-    .chessboard tr:nth-child(odd) td:nth-child(even),
-    .chessboard tr:nth-child(even) td:nth-child(odd) { background: #eee; }
-    .chessboard tr:nth-child(odd) td:nth-child(odd),
-    .chessboard tr:nth-child(even) td:nth-child(even) { background: #999; }
-    .notation { background: #f2f2f2 !important; font-weight: bold; width: 30px !important; }
-</style>
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Шахівниця</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin: 20px auto;
+        border: 2px solid #333;
+      }
+      td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+      }
+      th {
+        background: #eee;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
 
-<table class="chessboard">
-    <caption>Шахівниця (Алгебраїчна нотація)</caption>
-    <tr>
-        <th class="notation">8</th>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-    </tr>
-    <tr>
-        <th class="notation">1</th>
-        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-    </tr>
-    <tr>
-        <th class="notation"></th>
-        <th class="notation">A</th>
-        <th class="notation">B</th>
-        <th class="notation">C</th>
-        <th class="notation">D</th>
-        <th class="notation">E</th>
-        <th class="notation">F</th>
-        <th class="notation">G</th>
-        <th class="notation">H</th>
-    </tr>
-</table>
+      /* Логіка розфарбовування шахівниці */
+      /* Парні клітинки в непарних рядках — темні */
+      tr:nth-child(odd) td:nth-child(even) {
+        background: #999;
+      }
+      /* Непарні клітинки в парних рядках — темні */
+      tr:nth-child(even) td:nth-child(odd) {
+        background: #999;
+      }
+      /* Решта клітинок — світлі */
+      tr:nth-child(odd) td:nth-child(odd) {
+        background: #fff;
+      }
+      tr:nth-child(even) td:nth-child(even) {
+        background: #fff;
+      }
+
+      .notation-v {
+        width: 30px;
+      }
+      .notation-h {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Шахівниця (Алгебраїчна нотація)
+      </caption>
+      <tr>
+        <th class="notation-v">8</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="notation-v">7</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="notation-v">6</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="notation-v">5</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="notation-v">4</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="notation-v">3</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="notation-v">2</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="notation-v">1</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th class="notation-v"></th>
+        <th class="notation-h">A</th>
+        <th class="notation-h">B</th>
+        <th class="notation-h">C</th>
+        <th class="notation-h">D</th>
+        <th class="notation-h">E</th>
+        <th class="notation-h">F</th>
+        <th class="notation-h">G</th>
+        <th class="notation-h">H</th>
+      </tr>
+    </table>
+  </body>
+</html>
