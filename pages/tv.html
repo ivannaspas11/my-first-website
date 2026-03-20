@@ -1,29 +1,75 @@
-<table>
-    <caption>Телепрограма на день</caption>
-    <thead>
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Телепрограма</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 90%;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      caption {
+        font-weight: bold;
+        font-size: 1.4em;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      th,
+      td {
+        border: 1px solid #ccc; /* Чіткі межі клітинок */
+        padding: 12px;
+        text-align: center;
+      }
+      th {
+        background-color: #f8f9fa; /* Сірий фон для шапки */
+        font-weight: bold;
+      }
+      /* Підсвічування колонки з часом */
+      td:first-child {
+        background-color: #f1f3f5;
+        font-weight: bold;
+        width: 100px;
+      }
+      /* Ефект при наведенні мишкою */
+      tr:hover {
+        background-color: #fdfdfe;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Телепрограма на день
+      </caption>
+      <thead>
         <tr>
-            <th>Час</th>
-            <th>Channel 1</th>
-            <th>Discovery</th>
-            <th>Sports TV</th>
+          <th>Час</th>
+          <th>Channel 1</th>
+          <th>Discovery</th>
+          <th>Sports TV</th>
         </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
         <tr>
-            <td>09:00</td>
-            <td rowspan="2">Ранкові новини</td>
-            <td>Дика природа</td>
-            <td>Огляд туру</td>
-        </tr>
-        <tr>
-            <td>10:00</td>
-            <td rowspan="3">Марафон: Як це влаштовано</td>
-            <td>Прямий ефір: Футбол</td>
+          <td>09:00</td>
+          <td rowspan="2">Ранкові новини</td>
+          <td>Дика природа</td>
+          <td>Огляд туру</td>
         </tr>
         <tr>
-            <td>11:00</td>
-            <td>Ток-шоу</td>
-            <td>Спортивні новини</td>
+          <td>10:00</td>
+          <td rowspan="2">Марафон: Як це влаштовано</td>
+          <td>Прямий ефір: Футбол</td>
         </tr>
-    </tbody>
-</table>
+        <tr>
+          <td>11:00</td>
+          <td>Ток-шоу</td>
+          <td>Спортивні новини</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
