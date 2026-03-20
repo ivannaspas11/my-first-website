@@ -1,50 +1,101 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Головна сторінка - Кафедра СІ</title>
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+    <style>
+        /* Додав трохи стилів для таблиці, щоб вона виглядала акуратно */
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; font-family: sans-serif; }
+        th, td { border: 1px solid #444; padding: 10px; text-align: center; }
+        th { background-color: #f0f0f0; }
+        caption { font-weight: bold; font-size: 1.2em; margin-bottom: 10px; }
+        .nav-extra { background: #eef2f3; padding: 10px; border-radius: 5px; list-style: none; display: flex; gap: 15px; justify-content: center; }
+    </style>
+</head>
+<body>
     <header>
-      <h1>Кафедра системи інформацій</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="pages/about.html">Про кафедру</a></li>
-          <li><a href="pages/team.html">Команда</a></li>
-          <li><a href="pages/resume.html">Резюме</a></li>
-          <li><a href="pages/blog.html">Блог</a></li>
-          <li><a href="pages/contacts.html">Контакти</a></li>
-          <li><a href="pages/faq.html">FAQ</a></li>
-        </ul>
-      </nav>
+        <h1>Кафедра систем інформації</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="pages/about.html">Про кафедру</a></li>
+                <li><a href="pages/team.html">Команда</a></li>
+                <li><a href="pages/resume.html">Резюме</a></li>
+                <li><a href="pages/blog.html">Блог</a></li>
+                <li><a href="pages/contacts.html">Контакти</a></li>
+                <li><a href="pages/faq.html">FAQ</a></li>
+            </ul>
+            <ul class="nav-extra">
+                <li><a href="pages/tv-program.html">📺 Телепрограма</a></li>
+                <li><a href="pages/chessboard.html">♟️ Шахівниця</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <h2>Привіт, GitHub!</h2>
-        <p>
-          <mark>Це головна сторінка</mark> мого першого вебсайту, створеного в
-          рамках лабораторних робіт.
-        </p>
-      </section>
+        <section class="hero">
+            <h2>Привіт, GitHub!</h2>
+            <p>
+                <mark>Це головна сторінка</mark> мого першого вебсайту, створеного в
+                рамках лабораторних робіт.
+            </p>
+        </section>
 
-      <section>
-        <h3>Останні новини</h3>
-        <details>
-          <summary>Дізнатися про оновлення сайту</summary>
-          <p>
-            Сайт було переведено на повну семантичну розмітку HTML5 для кращої
-            доступності та SEO.
-          </p>
-        </details>
-      </section>
+        <section>
+            <h3>Мій розклад занять</h3>
+            <table>
+                <caption>Розклад занять на IV семестр</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Час</th>
+                        <th scope="col">Понеділок</th>
+                        <th scope="col">Вівторок</th>
+                        <th scope="col">Середа</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">08:30 - 10:00</th>
+                        <td>Сучасні web-технології</td>
+                        <td>3-D анімація</td>
+                        <td>Іноземна мова</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10:10 - 11:40</th>
+                        <td colspan="2">Спільна лекція: Сучасні web-технології</td>
+                        <td>Філософія</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">11:50 - 13:20</th>
+                        <td>Філософія</td>
+                        <td rowspan="2">Практика: 3-D анімація</td>
+                        <td>Іноземна мова</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">13:30 - 15:00</th>
+                        <td>Вікно</td>
+                        <td>Сучасні web-технології</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Останні новини</h3>
+            <details>
+                <summary>Дізнатися про оновлення сайту</summary>
+                <p>
+                    Сайт було доповнено новими завданнями: створено семантичну таблицю розкладу занять на IV семестр, 
+                    а також додано окремі сторінки з телепрограмою та шахівницею.
+                </p>
+            </details>
+        </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Кафедра системи інформацій. Всі права захищені.</p>
+        <p>&copy; 2026 Кафедра систем інформації. Всі права захищені.</p>
     </footer>
-  </body>
+</body>
 </html>
