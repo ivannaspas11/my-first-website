@@ -1,0 +1,33 @@
+<style>
+    .chessboard { border-collapse: collapse; }
+    .chessboard td { width: 50px; height: 50px; }
+    /* Шаховий порядок кольорів */
+    .chessboard tr:nth-child(odd) td:nth-child(even),
+    .chessboard tr:nth-child(even) td:nth-child(odd) { background: #eee; }
+    .chessboard tr:nth-child(odd) td:nth-child(odd),
+    .chessboard tr:nth-child(even) td:nth-child(even) { background: #999; }
+    .notation { background: #f2f2f2 !important; font-weight: bold; width: 30px !important; }
+</style>
+
+<table class="chessboard">
+    <caption>Шахівниця (Алгебраїчна нотація)</caption>
+    <tr>
+        <th class="notation">8</th>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th class="notation">1</th>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <th class="notation"></th>
+        <th class="notation">A</th>
+        <th class="notation">B</th>
+        <th class="notation">C</th>
+        <th class="notation">D</th>
+        <th class="notation">E</th>
+        <th class="notation">F</th>
+        <th class="notation">G</th>
+        <th class="notation">H</th>
+    </tr>
+</table>
